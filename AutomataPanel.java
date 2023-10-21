@@ -11,7 +11,7 @@ public class AutomataPanel extends JPanel {
     public AutomataPanel(automata automata) {
         this.miAutomata = automata;
         this.statePositions = new HashMap<>();
-        this.stateRadius = 80;
+        this.stateRadius = 100;
     }
 
     // Este método se llama automáticamente cuando el panel necesita ser repintado
@@ -30,7 +30,7 @@ public class AutomataPanel extends JPanel {
     // Dibuja los estados como círculos
     private void drawStates(Graphics g) {
         int x = 50; // Coordenada x inicial
-        int y = getHeight() / 2 - 150; // Altura centrada
+        int y = getHeight() / 2 - 50; // Altura centrada
 
         g.setColor(Color.BLACK);
         for (int i = 0; i < miAutomata.estados.length; i++) {
@@ -39,7 +39,13 @@ public class AutomataPanel extends JPanel {
             if( i == (miAutomata.estados.length - 1)){
                 g.drawOval(x, y, stateRadius, stateRadius);
                 g.drawOval(x - 10, y - 10, stateRadius + 20, stateRadius + 20);
-            }else{
+            }else if(i == 0){
+                g.drawOval(x, y, stateRadius, stateRadius);
+                g.drawLine(x - 30 , y + 50, x, y + 50);
+                g.drawLine(x - 10 , y + 60, x, y + 50);
+                g.drawLine(x - 10 , y + 40, x, y + 50);
+            }
+            else{
             g.drawOval(x, y, stateRadius, stateRadius);
             }
             // Almacena la posición del estado
@@ -50,9 +56,9 @@ public class AutomataPanel extends JPanel {
             // Aumenta la coordenada x para el siguiente estado
             x += 150;
             if (i % 2 == 0) {
-                y = getHeight() / 2 + 100; // Siguiente estado abajo
+                y = getHeight() / 2 + 50; // Siguiente estado abajo
             } else {
-                y = getHeight() / 2 - 200; // Siguiente estado arriba
+                y = getHeight() / 2 - 150; // Siguiente estado arriba
             }
         }
     }

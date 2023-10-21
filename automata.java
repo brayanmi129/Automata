@@ -26,11 +26,11 @@ public class automata {
         System.out.println("El lenguaje es: {" + lenguaje + "}" );
         
         //Lista de estados
-        System.out.println("Lista De Estados" );
+        // System.out.println("Lista De Estados" );
 
-        for (int i = 0; i < cantidad; i++) {
-            System.out.println("Estado " + (i + 1) + ": " + estados[i]);
-        }
+        // for (int i = 0; i < cantidad; i++) {
+        //     System.out.println("Estado " + (i + 1) + ": " + estados[i]);
+        // }
 
         //Estado inicial y final
         System.out.println("Estado Inicial: " + EstadoInicial );

@@ -19,12 +19,12 @@ public class automataGUI  extends JFrame {
         this.setBounds(0, 0, 1000, 650);
 
         miautomataPanel = new AutomataPanel(miAutomata);
-        miautomataPanel.setBounds(20, 100, 950, 500);
+        miautomataPanel.setBounds(20, 80, 950, 520);
         miautomataPanel.setBorder(new LineBorder(Color.RED, 2));
         add(miautomataPanel);
 
         texto1 = new JLabel("AUTOMATA");
-        texto1.setBounds(350,40,300,30);
+        texto1.setBounds(350,20,300,30);
         texto1.setFont(new Font("Andale Mono",1, 40));
         texto1.setForeground(new Color(0,0,0));
         add(texto1);
